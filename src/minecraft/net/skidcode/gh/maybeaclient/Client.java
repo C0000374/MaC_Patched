@@ -73,7 +73,7 @@ public class Client {
 	public static String cmdPrefix = ".";
 	public static Minecraft mc;
 	public static final String clientName = "MaybeAClient";
-	public static final String clientVersion = "4.0.8";
+	public static final String clientVersion = "4.0.9";
 	
 	public static final int saveVersion = 4;
 	/*
@@ -717,10 +717,9 @@ public class Client {
 	*/
 	
 	/**
-	 * 4.0.8
-	 * Added AutoStore (gameherobrine)
-	 * Added NoWater for AntiSlowdown (disabled by default) (gameherobrine)
-	 * Added SmoothLight (yawningcheese)
+	 * 4.0.9
+	 * * Fixed clouds norender affecting hotbar sometimes
+	 * * Fixed ability to activate multiple setting items in gui (hopefully)
 	 */
 	
 	static {
@@ -1097,7 +1096,6 @@ public class Client {
 		return -(key+1); //0 - 15 -> -1 - -16
 	}
 	public static Hack disconnectCausedBy = null;
-	public static boolean renderEdgeLines = false;
 	public static void forceDisconnect(Hack h) {
 		if(disconnectCausedBy == null) {
 			mc.theWorld.sendQuittingDisconnectingPacket();

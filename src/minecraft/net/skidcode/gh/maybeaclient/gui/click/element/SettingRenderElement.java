@@ -40,7 +40,7 @@ public class SettingRenderElement extends Element{
 	public boolean onClick(int mx, int my, int click) {
 		int setBord = ClickGUIHack.theme().settingBorder;
 		this.toRender.onPressedInside(this, this.startX + setBord, this.startY + setBord, this.endX - setBord, this.endY - setBord, mx, my, click);
-		return GUIUtils.isInsideRect(mx, my, this.startX + setBord, this.startY + setBord, this.endX - setBord, this.endY - setBord);
+		return true; //GUIUtils.isInsideRect(mx, my, this.startX + setBord, this.startY + setBord, this.endX - setBord, this.endY - setBord);
 	}
 	public boolean hoveringOver(int x, int y) {
 		this.toRender.mouseHovered(x, y, -1);

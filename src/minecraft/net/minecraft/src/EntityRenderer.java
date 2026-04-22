@@ -611,7 +611,9 @@ public class EntityRenderer {
 
             this.setupFog(0, var1);
             GL11.glEnable(2912 /*GL_FOG*/);
-            if(NoRenderHack.instance.status && NoRenderHack.instance.clouds.value) {}
+            if(NoRenderHack.instance.status && NoRenderHack.instance.clouds.value) {
+            	GL11.glBlendFunc(770, 771);
+            }
             else {
             	GL11.glPushMatrix(); //XXX fixes weird transformation
             	var5.renderClouds(var1);

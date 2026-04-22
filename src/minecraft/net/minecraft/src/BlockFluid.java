@@ -96,6 +96,8 @@ public abstract class BlockFluid extends Block {
     }
 
     public static boolean forceNullBB = false;
+    
+    @Override
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World var1, int var2, int var3, int var4) {
     	if(forceNullBB || Client.mc.thePlayer == null) return null;
     	

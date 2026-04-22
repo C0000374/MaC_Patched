@@ -577,7 +577,6 @@ public abstract class Tab extends Element implements SettingsProvider{
 		}else if(ClickGUIHack.theme() == Theme.UWARE) {
 			ScaledResolution scaledResolution = new ScaledResolution(Client.mc.gameSettings, Client.mc.displayWidth, Client.mc.displayHeight);
 			double scaledpx = 1d/scaledResolution.scaleFactor;
-			//renderFrameOutlines(xStart, yStart, xEnd, yEnd);
 			Tessellator tess = Tessellator.instance;
 			GL11.glColor4f(0, 0, 0, 1f);
 			GL11.glLineWidth(1f);
@@ -605,14 +604,6 @@ public abstract class Tab extends Element implements SettingsProvider{
 			Tessellator.instance.addVertex(xStart, yEnd-Theme.UWARE_ROUNDNESS, 0);
 			Tessellator.instance.draw();
 			GL11.glLineWidth(1);
-			/*tess.startDrawing(GL11.GL_LINE_LOOP);
-			tess.addVertex(xStart, yStart, 0);
-			tess.addVertex(xStart, yEnd-Theme.UWARE_ROUNDNESS, 0);
-			tess.addVertex(xStart+Theme.UWARE_ROUNDNESS, yEnd, 0);
-			tess.addVertex(xEnd-Theme.UWARE_ROUNDNESS, yEnd, 0);
-			tess.addVertex(xEnd, yEnd-Theme.UWARE_ROUNDNESS, 0);
-			tess.addVertex(xEnd, yStart, 0);
-			tess.draw();*/
 		}
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		GL11.glDisable(GL11.GL_BLEND);
