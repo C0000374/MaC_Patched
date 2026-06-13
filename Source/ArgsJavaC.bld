@@ -1,0 +1,1 @@
+-classpath "..\Libraries\JInput.jar;..\Libraries\LWJGL.jar;..\Libraries\LWJGL_Util.jar;..\Libraries\Minecraft.jar" -d ..\Bin

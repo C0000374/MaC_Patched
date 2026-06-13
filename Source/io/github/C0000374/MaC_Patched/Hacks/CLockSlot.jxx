@@ -1,0 +1,21 @@
+package io.github.C0000374.MaC_Patched.Hacks;
+
+import net.skidcode.gh.maybeaclient.hacks.Hack;
+import net.skidcode.gh.maybeaclient.hacks.category.Category;
+import net.skidcode.gh.maybeaclient.hacks.settings.SettingInteger;
+import org.lwjgl.input.Keyboard;
+
+public class CLockSlot extends Hack {
+    
+    public static CLockSlot Instance;
+    public SettingInteger Slot = new SettingInteger(this, "Slot", 9, 0, 9, 1);
+    
+    public
+    CLockSlot(
+        )
+    {
+        super("LockSlot", "Locks slot", Keyboard.KEY_NONE, Category.MISC);
+        this.addSetting(Slot);
+        Instance = this;
+    }
+}
